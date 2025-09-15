@@ -20,21 +20,7 @@ namespace calculator
                 Console.Write("Введите знак действия: ");
                 string input = Console.ReadLine();
     
-                if (input == "M+")
-                {
-                    memory += one;
-                    Console.WriteLine("В памяти теперь: " + memory);
-                }
-                else if (input == "M-")
-                {
-                    memory -= one;
-                    Console.WriteLine("В памяти теперь: " + memory);
-                }
-                else if (input == "MR")
-                {
-                    Console.WriteLine("Число в памяти: " + memory);
-                }
-                else if (input == "1/x")
+                if (input == "1/x")
                 {
                     if (one == 0)
                         Console.WriteLine("Ошибка! Деление на ноль.");
@@ -58,6 +44,20 @@ namespace calculator
                         result = (float)Math.Sqrt(one);
                         Console.WriteLine("Результат: " + result);
                     }
+                }
+                else if (input == "M+")
+                {
+                    memory += one;
+                    Console.WriteLine("В памяти теперь: " + memory);
+                }
+                else if (input == "M-")
+                {
+                    memory -= one;
+                    Console.WriteLine("В памяти теперь: " + memory);
+                }
+                else if (input == "MR")
+                {
+                    Console.WriteLine("Число в памяти: " + memory);
                 }
                 else
                 {
